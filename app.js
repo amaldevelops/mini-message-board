@@ -1,15 +1,34 @@
+// App setup
 const express = require("express");
 const app = express();
-const PORT = 3000;
-
 const path = require("node:path");
 const assetsPath = path.join(__dirname, "public");
 app.use(express.static(assetsPath));
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 
+const PORT = 3000;
+
+const messages = [
+  {
+    text: "Hi there!",
+    user: "Maverick",
+    added: new Date(),
+  },
+  {
+    text: "Hello World!",
+    user: "Charles",
+    added: new Date(),
+  },
+  {
+    text: "Welcome to Melbourne !",
+    user: "Albanese",
+    added: new Date(),
+  },
+];
+
 app.get("/", (req, res) => {
-  res.render("index");
+  res.render("index", { messages: messages });
 });
 
 app.get("/new", (req, res) => {
