@@ -1,11 +1,14 @@
 // App setup
 const express = require("express");
-const app = express();
 const path = require("node:path");
+const app = express();
 const assetsPath = path.join(__dirname, "public");
+const newMessageRouter=require("./routes/newMessage");
+
 app.use(express.static(assetsPath));
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
+app.use("/new",newMessageRouter)
 
 const PORT = 3000;
 
@@ -31,9 +34,9 @@ app.get("/", (req, res) => {
   res.render("index", { messages: messages });
 });
 
-app.get("/new", (req, res) => {
-  res.render("new");
-});
+// app.get("/new", (req, res) => {
+//   res.render("new");
+// });
 
 app.listen(PORT, () => {
   console.log("Mini Message Board");
