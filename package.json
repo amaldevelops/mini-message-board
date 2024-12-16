@@ -1,0 +1,16 @@
+{
+  "name": "nodejs-mini-message-board",
+  "version": "1.0.0",
+  "description": "Welcome to the Mini Message Board project! This interactive web application allows users to post and view messages. Built using Express.js and EJS, this project demonstrates key concepts in building server-side web applications.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.21.2"
+  }
+}
