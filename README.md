@@ -2,6 +2,10 @@
 
 Welcome to the Mini Message Board project! This interactive web application allows users to post and view messages. Built using Express.js and EJS, this project demonstrates key concepts in building server-side web applications.
 
+## Live Demo
+
+https://nodejs-mini-message-board-csdz.onrender.com
+
 ## Features
 
 - Display existing messages on the homepage.
