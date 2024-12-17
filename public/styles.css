@@ -1,0 +1,39 @@
+* {
+  background-color: #1a478a;
+  font-size: 16px;
+}
+
+h1 {
+  color: #f7fdff;
+  font-size: 2rem;
+}
+
+li {
+  color: #c8ced7;
+  font-size: 1.5rem;
+  margin: 1rem;
+}
+
+a {
+  font-size: 2rem;
+  color: #c8ced7;
+}
+
+form {
+  color: #c8ced7;
+  font-size: 1.7rem;
+  border: 2px solid rgb(0, 255, 51);
+}
+
+input {
+  border: 2px solid red;
+  color: #f7fdff;
+}
+
+label {
+  font-size: 1.5rem;
+}
+
+button {
+  background-color: #1cb11a;
+}

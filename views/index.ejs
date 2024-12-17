@@ -3,22 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles.css" />
     <title>Mini Message Board</title>
   </head>
   <body>
     <div><a href="new">New Message</a></div>
-<div>
-  <img src="/Enterprise_Forward.jpg" alt="USS Enterprise (NCC-1701-D)">
-</div>
+    <div>
+      <img src="/Enterprise_Forward.jpg" alt="USS Enterprise (NCC-1701-D)" />
+    </div>
     <h1>
       USS Enterprise (NCC-1701-D) - LCARS (Library Computer Access/Retrieval
-      System) command log
+      System) message board and command log
     </h1>
     <ul>
       <% for (let i = 0; i < messages.length; i++) { %>
       <li>
         <strong><%= messages[i].user %></strong>: <%= messages[i].text %> (<%=
         messages[i].added %> )
+        <a href="<%= [i] %>">Open Message</a>
       </li>
       <% } %>
     </ul>

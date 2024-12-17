@@ -8,7 +8,7 @@ const newMessageRouter = Router();
 
 // Set Static asset path for serving images, css, etc.
 const path = require("node:path");
-const assetsPath=path.join(__dirname,"public");
+const assetsPath = path.join(__dirname, "public");
 app.use(express.static(assetsPath));
 
 // Set view Engine
@@ -59,6 +59,22 @@ app.post("/new", (req, res) => {
   res.redirect("/");
 });
 
+app.get("/:messageID", (req, res) => {
+  const { messageID } = req.params;
+  res.send(`Author: ${messages[messageID]["user"]} <br>
+        Message: ${messages[messageID]["text"]} <br>
+        Time: ${messages[messageID]["added"]} <br>
+        <-- Click the browser Back button to go back`);
+});
+
 app.listen(PORT, () => {
-  console.log("Mini Message Board");
+  console.log(
+    "USS Enterprise (NCC-1701-D) - LCARS (Library Computer Access/Retrieval System) Message and Command Log"
+  );
+});
+
+app.use((err, req, res, next) => {
+  console.error(err);
+  // We can now specify the `err.statusCode` that exists in our custom error class and if it does not exist it's probably an internal server error
+  res.status(err.statusCode || 500).send(err.message);
 });
