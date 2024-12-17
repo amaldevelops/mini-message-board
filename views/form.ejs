@@ -8,15 +8,29 @@
   <body>
     <div>
       <a href="/">Home</a>
-      <h1>Send New message</h1>
+      <div>
+        <img src="/Enterprise_Forward.jpg" alt="USS Enterprise (NCC-1701-D)" />
+      </div>
+      <h1>LCARS (Library Computer Access/Retrieval System) send new message</h1>
       <form method="POST" action="/new">
         <div>
-          <label for="authorName">Author Name: </label>
-          <input type="text" id="authorName" name="authorName" />
+          <label for="authorName">Author Name: </label><br />
+          <input
+            type="text"
+            id="authorName"
+            name="authorName"
+            value="Captain Picard"
+          />
         </div>
         <div>
           <label for="messageText">Message:</label>
-          <input type="text" id="messageText" name="authorName" />
+          <br />
+          <input
+            type="text"
+            id="messageText"
+            name="messageText"
+            value="Message"
+          />
         </div>
         <div>
           <button type="submit">Submit</button>
