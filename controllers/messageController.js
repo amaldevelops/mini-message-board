@@ -1,3 +1,5 @@
+const db = require("../db/queries");
+
 const messages = [
   {
     text: "Welcome to Star Trek Next Generation!",
@@ -22,6 +24,8 @@ const messages = [
 ];
 
 async function displayAllMessages(req, res) {
+  const messages2= await db.SQLGetAllMessages();
+  console.log(messages2);
   res.render("index", { messages: messages });
 }
 
