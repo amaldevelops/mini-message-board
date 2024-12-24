@@ -7,7 +7,7 @@ const { Client } = require("pg");
 
 require("dotenv").config();
 
-console.log("Loaded ENV Variables:", process.env.PW);
+// console.log("Loaded ENV Variables:", process.env.PW);
 
 const SQL = `
 CREATE TABLE IF NOT EXISTS messages(
@@ -29,7 +29,7 @@ VALUES
 async function main() {
   console.log("Seeding....");
   const client = new Client({
-    connectionString: `postgresql://${process.env.USER_NAME}:${process.env.PW}@localhost:5432/messages`,
+    connectionString: `postgresql://${process.env.USER_NAME}:${process.env.PW}@${process.env.HOST_NAME}:${process.env.PORT}/${process.env.DATABASE_NAME}?ssl=true`,
   });
 
   try {
