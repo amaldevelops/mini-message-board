@@ -1,9 +1,8 @@
 const { Router } = require("express");
 
-const messageController = require ("../controllers/messageController")
+const messageController = require("../controllers/messageController");
 
 const messagesRouter = Router();
-
 
 messagesRouter.get("/", messageController.displayAllMessages);
 
