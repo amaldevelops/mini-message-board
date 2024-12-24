@@ -10,9 +10,7 @@ require("dotenv").config();
 //   ssl:false,
 // });
 
-
 // Again, this should be read from an environment variable
 module.exports = new Pool({
-  connectionString: process.env.CONNECTION_URI
+  connectionString: process.env.CONNECTION_URI,
 });
-

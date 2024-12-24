@@ -31,8 +31,7 @@ async function main() {
   const client = new Client({
     // connectionString: `postgresql://${process.env.USER_NAME}:${process.env.PW}@${process.env.HOST_NAME}:${process.env.PORT}/${process.env.DATABASE_NAME}?ssl=true`,
 
-    connectionString:process.env.CONNECTION_URI,
-
+    connectionString: process.env.CONNECTION_URI,
   });
 
   try {
