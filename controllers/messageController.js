@@ -17,13 +17,19 @@ async function postForm(req, res) {
 }
 
 async function getMessagesByID(req, res) {
-  const { messageID } = req.params;
-  let messages = await db.SQLGetMessageByID(messageID);
-  console.log(messages);
-  res.send(`Author: ${messages[0]["users"]} <br>
-          Message: ${messages[0]["text"]} <br>
-          Time: ${messages[0]["added"]} <br>
-          <-- Click the browser Back button to go back`);
+  try {
+    const { messageID } = req.params;
+    let messages = await db.SQLGetMessageByID(messageID);
+    console.log(messages);
+    res.send(`Author: ${messages[0]["users"]} <br>
+            Message: ${messages[0]["text"]} <br>
+            Time: ${messages[0]["added"]} <br>
+            <-- Click the browser Back button to go back`);
+  } catch (err) {
+    res.send("Error Fetching Message and no such ID exists");
+    console.log(err);
+    // throw err;
+  }
 }
 
 module.exports = {
