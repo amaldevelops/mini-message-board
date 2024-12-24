@@ -1,6 +1,6 @@
 # NodeJs and Express based Mini Message Board
 
-Welcome to the Mini Message Board project! This interactive web application allows users to post and view messages. Built using Express.js and EJS, this project demonstrates key concepts in building server-side web applications.
+Welcome to the Mini Message Board project! This interactive web application allows users to post and view messages. Built using Express.js, PostgreSQL and EJS, this project demonstrates key concepts in building server-side web applications.
 
 ## Live Demo
 
@@ -20,6 +20,10 @@ https://nodejs-mini-message-board-csdz.onrender.com
 
 - Express.js: Web application framework.
 
+- PostgreSQL for storage
+
+- Deployed to production on Render.com
+
 - EJS: Templating engine for dynamic content rendering.
 
 - HTML & CSS: Frontend structure and styling.
@@ -37,7 +41,7 @@ git clone https://github.com/1Amal/NodeJs-Mini-Message-Board `
 
 - Start the server: npm start
 
-- Open your browser and visit: 
+- Open your browser and visit:  
 `http://localhost:3000`
 
 ## Usage
