@@ -7,7 +7,7 @@ const { Client } = require("pg");
 
 require("dotenv").config();
 
-// console.log("Loaded ENV Variables:", process.env.PW);
+console.log("Loaded ENV Variables:", process.env.CONNECTION_URI);
 
 const SQL = `
 CREATE TABLE IF NOT EXISTS messages(
